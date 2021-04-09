@@ -7,7 +7,7 @@ import Page from '../components/Page';
 import Login from './Login';
 import Logout from './Logout';
 import Welcome from './Welcome';
-import Home from './Home';
+import { Home } from './Home';
 
 import styles from './AppRouter.module.scss';
 
