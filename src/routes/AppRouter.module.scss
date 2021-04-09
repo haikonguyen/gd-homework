@@ -1,7 +1,8 @@
-@import "../theme.scss";
+@import '../theme.scss';
 
 .AppRouter {
-    color: $color-text;
-    font-size: 14px;
-    font-family: $font-family;
+  color: $color-text;
+  font-size: 14px;
+  font-family: $font-family;
+  background-color: $color-main-bg;
 }
