@@ -5,8 +5,7 @@ import {
   defaultDateFilterOptions
 } from '@gooddata/sdk-ui-filters';
 import { DateFilterGranularity } from '@gooddata/sdk-backend-spi';
-
-console.log('defaultDateFilterOptions', defaultDateFilterOptions);
+import { CustomDateFilterProps } from './types';
 
 const availableGranularities: DateFilterGranularity[] = [
   'GDC.time.date',
@@ -20,22 +19,25 @@ interface IDateFilterComponentExampleState {
   excludeCurrentPeriod: boolean;
 }
 
-export const CustomDateFilter: FC = () => {
-  const [state, setState] = useState<IDateFilterComponentExampleState>({
+export const CustomDateFilter: FC<CustomDateFilterProps> = (props) => {
+  const { className } = props;
+  const [state] = useState<IDateFilterComponentExampleState>({
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     selectedFilterOption: defaultDateFilterOptions.allTime!,
     excludeCurrentPeriod: false
   });
   return (
-    // <div>test</div>
-    <DateFilter
-      excludeCurrentPeriod
-      selectedFilterOption={state.selectedFilterOption}
-      filterOptions={defaultDateFilterOptions}
-      availableGranularities={availableGranularities}
-      customFilterName="Selected date"
-      dateFilterMode="active"
-      dateFormat="MM/dd/yyyy"
-      onApply={() => console.log('onApply handler')}
-    />
+    <div className={className}>
+      <DateFilter
+        excludeCurrentPeriod
+        selectedFilterOption={state.selectedFilterOption}
+        filterOptions={defaultDateFilterOptions}
+        availableGranularities={availableGranularities}
+        customFilterName="Selected date"
+        dateFilterMode="active"
+        dateFormat="MM/dd/yyyy"
+        onApply={() => console.log('onApply handler')}
+      />
+    </div>
   );
 };
