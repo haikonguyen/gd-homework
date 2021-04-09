@@ -1,0 +1,11 @@
+.CustomComponent {
+  h2 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+      font-size: 56px;
+    }
+  }
+}
