@@ -3,7 +3,7 @@ import React from 'react';
 import Page from '../components/Page';
 import { FilterBar } from '../components/FilterBar/FilterBar';
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <Page>
       <h1>My Dashboard</h1>
@@ -11,5 +11,3 @@ const Home: React.FC = () => {
     </Page>
   );
 };
-
-export default Home;
