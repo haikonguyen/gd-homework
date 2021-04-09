@@ -18,6 +18,7 @@ $color-border: lighten($color-paper-inverse, 65%);
 $color-grey-lighter: #f4f0f0;
 $color-accent: #b19057;
 $color-accent-lighter: lighten($color-accent, 35%);
+$color-main-bg: #fafafa;
 
 $spacing: 20px;
 $font-size-body: 14px;
@@ -26,7 +27,7 @@ $font-size-h2: 40px;
 $font-size-h3: 30px;
 $font-size-h4: 20px;
 $font-size-h5: 15px;
-$font-family: avenir, "Helvetica Neue", arial, sans-serif;
+$font-family: avenir, 'Helvetica Neue', arial, sans-serif;
 $border-radius: 6px;
 
 $transition-fast: all 0.2s ease 0s;

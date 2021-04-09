@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@gooddata/sdk-backend-bear": "^8.2.0",
+        "@gooddata/sdk-backend-spi": "^8.2.0",
         "@gooddata/sdk-model": "^8.2.0",
         "@gooddata/sdk-ui": "^8.2.0",
         "@gooddata/sdk-ui-charts": "^8.2.0",
@@ -15,6 +16,7 @@
         "formik": "^1.5.7",
         "lodash": "^4.17.15",
         "react": "^16.8.6",
+        "react-app-polyfill": "^2.0.0",
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.1",
         "react-router-dom": "^5.0.1",
@@ -35,7 +37,10 @@
         "refresh-ldm": "node ./scripts/refresh-ldm.js"
     },
     "eslintConfig": {
-        "extends": [ "wesbos", "react-app"]
+        "extends": [
+            "wesbos",
+            "react-app"
+        ]
     },
     "browserslist": {
         "production": [
@@ -67,20 +72,14 @@
         "@types/react-helmet": "^6.1.0",
         "@types/react-router-dom": "^5.1.7",
         "@types/yup": "^0.29.11",
+        "@typescript-eslint/eslint-plugin": "^4.17.0",
+        "@typescript-eslint/parser": "^4.17.0",
+        "babel-eslint": "^10.1.0",
         "babel-plugin-add-module-exports": "^1.0.4",
         "cross-env": "^5.2.0",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
-        "husky": "^3.0.0",
-        "node-sass": "^4.13.1",
-        "pretty-quick": "^1.11.1",
-        "serve": "^11.2.0",
-        "testcafe": "^1.5.0",
-        "typescript": "^4.1.5",
-        "@typescript-eslint/eslint-plugin": "^4.17.0",
-        "@typescript-eslint/parser": "^4.17.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.22.0",
+        "eslint": "^6.6.0",
         "eslint-config-airbnb": "^18.2.1",
         "eslint-config-prettier": "^6.15.0",
         "eslint-config-wesbos": "^1.0.1",
@@ -90,7 +89,13 @@
         "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-react-hooks": "^4.2.0",
-        "prettier": "^2.2.1"
+        "husky": "^3.0.0",
+        "node-sass": "^4.13.1",
+        "prettier": "^2.2.1",
+        "pretty-quick": "^1.11.1",
+        "serve": "^11.2.0",
+        "testcafe": "^1.5.0",
+        "typescript": "^4.1.5"
     },
     "husky": {
         "hooks": {

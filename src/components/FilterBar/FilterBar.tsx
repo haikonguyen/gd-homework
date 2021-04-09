@@ -1,5 +1,12 @@
 import React, { FC } from 'react';
+import { CustomDateFilter } from '../CustomDateFilter/CustomDateFilter';
+import { Card } from '../../Card/Card';
 
 export const FilterBar: FC = () => {
-  return <div>Filter bar goes here</div>;
+  return (
+    <Card>
+      This is a filter bar section
+      <CustomDateFilter />
+    </Card>
+  );
 };
