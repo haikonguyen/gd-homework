@@ -190,12 +190,18 @@ export const CampaignSpend: IMeasure<IMeasureDefinition> = newMeasure(idRef("aaF
  * Metric Type: MAQL Metric
  */
 export const OrderAmount: IMeasure<IMeasureDefinition> = newMeasure(idRef("ab4gQSe3iBrr", "measure"));
+
 /**
  * Metric Title: Revenue
  * Metric ID: aaZgQ8Oqib25
  * Metric Type: MAQL Metric
  */
 export const Revenue: IMeasure<IMeasureDefinition> = newMeasure(idRef("aaZgQ8Oqib25", "measure"));
+export const RevenueMin: IMeasure<IMeasureDefinition> = newMeasure(idRef("aaZgQ8Oqib25", "fact"), (m) => m.aggregation("min"));
+export const RevenueObject = {
+  Min: newMeasure(idRef("aaZgQ8Oqib25", "fact"), (m) => m.aggregation("min")),
+  Max: newMeasure(idRef("aaZgQ8Oqib25", "fact"), (m) => m.aggregation("max"))
+}
 /**
  * Metric Title: Revenue (Clothing)
  * Metric ID: afcNseOVbs5T

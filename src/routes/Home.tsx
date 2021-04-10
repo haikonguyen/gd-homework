@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
 
   return (
     <Page>
-      <h1>My Dashboard</h1>
+      <h1>{`My Dashboard ${state.selectedFilterOption.localIdentifier}`}</h1>
       <FilterBar
         onApply={onApply}
         selectedFilterOption={state.selectedFilterOption}
@@ -53,7 +53,10 @@ export const Home: React.FC = () => {
           className={styles.customLineChart}
           filters={dateFilter ? [dateFilter] : []}
         />
-        <CustomComponent className={styles.customComponent} />
+        <CustomComponent
+          measures={measures}
+          className={styles.customComponent}
+        />
       </section>
     </Page>
   );
