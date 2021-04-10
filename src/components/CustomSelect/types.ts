@@ -4,6 +4,8 @@ export interface OptionProps {
 }
 
 export interface CustomSelectProps {
-  onChange?: () => void;
+  onChange?: (value: any) => void;
   options: OptionProps[];
+  value?: readonly OptionProps[] | OptionProps | null;
+  inputValue?: string;
 }

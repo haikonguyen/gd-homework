@@ -7,25 +7,33 @@ import { CustomSelect } from '../CustomSelect/CustomSelect';
 
 export const CustomComponent: FC<CustomComponentProps> = (props) => {
   const { className, measures } = props;
-  const [calculationValue, setCalculationValue] = useState('');
+  const [calculationValue, setCalculationValue] = useState(null);
 
   const options = [
     {
-      value: 'ocean',
+      value: 'max-value',
       label: 'Maximum Revenue across different products',
     },
     {
-      value: 'blue',
+      value: 'max-value',
       label: 'Minimum Revenue across different products',
     },
   ];
 
+  console.log('calculationValue', calculationValue);
+
+  const calculationValueHandler = (value: any) => {
+    console.log('value', value);
+    // setCalculationValue(value.value);
+  };
+
   return (
     <Card className={cx(styles.CustomComponent, className)}>
-      <h2>$456.66</h2>
+      <h2>{`$456.66 - ${calculationValue}`}</h2>
       <CustomSelect
         options={options}
-        onChange={() => console.log('onChange handler comes here')}
+        onChange={calculationValueHandler}
+        value={calculationValue}
       />
     </Card>
   );
