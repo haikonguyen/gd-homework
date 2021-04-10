@@ -4,7 +4,6 @@ import {
   DateFilterOption,
   defaultDateFilterOptions,
 } from '@gooddata/sdk-ui-filters';
-import { useExecution, useDataView } from '@gooddata/sdk-ui';
 import Page from '../components/Page';
 import { FilterBar } from '../components/FilterBar/FilterBar';
 import { CustomLineChart } from '../components/CustomLineChart/CustomLineChart';
@@ -54,7 +53,10 @@ export const Home: React.FC = () => {
           className={styles.customLineChart}
           filters={dateFilter ? [dateFilter] : []}
         />
-        <CustomComponent className={styles.customComponent} />
+        <CustomComponent
+          measures={measures}
+          className={styles.customComponent}
+        />
       </section>
     </Page>
   );
