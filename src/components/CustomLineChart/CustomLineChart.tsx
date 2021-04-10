@@ -7,7 +7,8 @@ import { Card } from '../Card/Card';
 
 export const CustomLineChart: FC<CustomLineChartProps> = ({
   measures,
-  className
+  className,
+  filters
 }) => {
   const style = { height: 300 };
 
@@ -17,6 +18,7 @@ export const CustomLineChart: FC<CustomLineChartProps> = ({
         measures={measures}
         trendBy={Ldm.DateDatasets.Date.Month.Short}
         segmentBy={Ldm.Product.Default}
+        filters={filters}
       />
     </Card>
   );
