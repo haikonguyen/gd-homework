@@ -4,6 +4,7 @@ import {
   DateFilterOption,
   defaultDateFilterOptions,
 } from '@gooddata/sdk-ui-filters';
+import { useExecution, useDataView } from '@gooddata/sdk-ui';
 import Page from '../components/Page';
 import { FilterBar } from '../components/FilterBar/FilterBar';
 import { CustomLineChart } from '../components/CustomLineChart/CustomLineChart';
@@ -42,7 +43,7 @@ export const Home: React.FC = () => {
 
   return (
     <Page>
-      <h1>My Dashboard</h1>
+      <h1>{`My Dashboard ${state.selectedFilterOption.localIdentifier}`}</h1>
       <FilterBar
         onApply={onApply}
         selectedFilterOption={state.selectedFilterOption}
