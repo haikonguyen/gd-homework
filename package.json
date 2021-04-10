@@ -98,10 +98,5 @@
         "serve": "^11.2.0",
         "testcafe": "^1.5.0",
         "typescript": "^4.1.5"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx|scss)\""
-        }
     }
 }

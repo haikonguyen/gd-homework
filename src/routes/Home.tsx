@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   DateFilterHelpers,
   DateFilterOption,
-  defaultDateFilterOptions
+  defaultDateFilterOptions,
 } from '@gooddata/sdk-ui-filters';
 import Page from '../components/Page';
 import { FilterBar } from '../components/FilterBar/FilterBar';
@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
   const [state, setState] = useState<IDateFilterComponentExampleState>({
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     selectedFilterOption: defaultDateFilterOptions.allTime!,
-    excludeCurrentPeriod: false
+    excludeCurrentPeriod: false,
   });
   const dateFilter = DateFilterHelpers.mapOptionToAfm(
     state.selectedFilterOption,
@@ -36,7 +36,7 @@ export const Home: React.FC = () => {
   ) => {
     setState({
       selectedFilterOption,
-      excludeCurrentPeriod
+      excludeCurrentPeriod,
     });
   };
 
